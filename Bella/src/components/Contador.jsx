@@ -4,7 +4,7 @@ import "../css/animacoes.css";
 import EmojisCaindo from "./EmojisCaindo";
 
 export default function Contador({ avancar }) {
-  const [tempo, setTempo] = useState(600); // 10 minutos
+  const [tempo, setTempo] = useState(300); // 10 minutos
 
   const frases = [
     "Prepare seu coração... tem uma surpresa vindo 💖",
