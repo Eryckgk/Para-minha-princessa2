@@ -1,0 +1,47 @@
+
+.contador {
+  min-height: 100vh;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background: linear-gradient(
+    135deg,
+    #DDEEFF,
+    #FFC8DD,
+    #DCC6E0
+  );
+}
+
+
+.contador h1 {
+  font-size: 40px;
+}
+
+
+.frase-espera {
+  font-size: 22px;
+  max-width: 600px;
+
+  animation: aparecerFrase 2s ease;
+}
+
+
+@keyframes aparecerFrase {
+
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}

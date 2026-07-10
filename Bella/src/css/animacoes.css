@@ -1,0 +1,219 @@
+.fade-in {
+  animation: fadeIn 1.5s ease;
+}
+
+
+.zoom-in {
+  animation: zoomIn 1s ease;
+}
+
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+
+@keyframes zoomIn {
+
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+
+
+.flutuar {
+
+  animation: flutuar 3s infinite ease-in-out;
+
+}
+
+
+@keyframes flutuar {
+
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+}
+
+
+
+
+
+/* Emojis caindo */
+
+.emojis {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 10;
+
+}
+
+
+
+.emojis span {
+
+  position: absolute;
+
+  top: -50px;
+
+  font-size: 30px;
+
+  opacity: 0.8;
+
+  animation: cair 6s linear infinite;
+
+}
+
+
+
+
+.emojis span:nth-child(1) {
+  left: 5%;
+}
+
+.emojis span:nth-child(2) {
+  left: 15%;
+  animation-delay: 1s;
+}
+
+.emojis span:nth-child(3) {
+  left: 25%;
+  animation-delay: 2s;
+}
+
+.emojis span:nth-child(4) {
+  left: 40%;
+  animation-delay: 0.5s;
+}
+
+.emojis span:nth-child(5) {
+  left: 55%;
+  animation-delay: 1.5s;
+}
+
+.emojis span:nth-child(6) {
+  left: 70%;
+  animation-delay: 2.5s;
+}
+
+.emojis span:nth-child(7) {
+  left: 85%;
+  animation-delay: 3s;
+}
+
+
+
+.emojis span:nth-child(odd) {
+
+  animation-duration: 8s;
+
+  font-size: 25px;
+
+}
+
+
+
+.emojis span:nth-child(even) {
+
+  animation-duration: 5s;
+
+  font-size: 35px;
+
+}
+
+
+
+
+@keyframes cair {
+
+  from {
+
+    transform:
+      translateY(-50px)
+      rotate(0deg);
+
+  }
+
+
+  to {
+
+    transform:
+      translateY(110vh)
+      rotate(360deg);
+
+  }
+
+}
+
+
+
+
+
+/* Abrir carta / dedicatória */
+
+.abrir {
+
+  animation: abrirCarta 1.5s ease;
+
+}
+
+
+
+@keyframes abrirCarta {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      scale(0.7)
+      rotateX(70deg);
+
+  }
+
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      scale(1)
+      rotateX(0deg);
+
+  }
+
+}

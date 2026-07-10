@@ -1,0 +1,92 @@
+.tela-inicial {
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 30px;
+
+  background: linear-gradient(
+    135deg,
+    #B8D8F8,
+    #FFC8DD,
+    #DCC6E0
+  );
+
+}
+
+
+.tela-inicial h1 {
+
+  font-size: 45px;
+
+  color: #34495E;
+
+}
+
+
+.mensagem {
+
+  max-width: 600px;
+
+  font-size: 22px;
+
+  color: #6C7A89;
+
+}
+
+
+.botao-surpresa {
+
+  margin-top: 30px;
+
+  padding: 18px 40px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #A7C7E7;
+
+  color: white;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+
+  animation: brilho 2s infinite;
+
+}
+
+
+.botao-surpresa:hover {
+
+  transform: scale(1.1);
+
+}
+
+
+@keyframes brilho {
+
+  0% {
+    box-shadow: 0 0 0 #FFC8DD;
+  }
+
+
+  50% {
+    box-shadow: 0 0 25px #FFC8DD;
+  }
+
+
+  100% {
+    box-shadow: 0 0 0 #FFC8DD;
+  }
+
+}

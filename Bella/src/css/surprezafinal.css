@@ -1,0 +1,314 @@
+.surpresa-final {
+
+  min-height: 100vh;
+
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background: linear-gradient(
+    135deg,
+    #DDEEFF,
+    #FFC8DD,
+    #DCC6E0
+  );
+
+  overflow: hidden;
+
+}
+
+
+/* Título */
+
+.surpresa-final h1 {
+
+  font-size: 45px;
+
+  color: #34495E;
+
+  margin-bottom: 30px;
+
+}
+
+
+
+/* Botão da música */
+
+.botao-musica {
+
+  padding: 16px 35px;
+
+  border: none;
+
+  border-radius: 30px;
+
+
+  background: linear-gradient(
+    135deg,
+    #A7C7E7,
+    #FFC8DD
+  );
+
+
+  color: white;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+
+  margin-bottom: 25px;
+
+
+  animation: brilho 2s infinite;
+
+  transition: 0.3s;
+
+}
+
+
+.botao-musica:hover {
+
+  transform: scale(1.08);
+
+}
+
+
+
+/* Foto */
+
+.foto-princesa {
+
+  width: 280px;
+
+  height: 280px;
+
+
+  object-fit: cover;
+
+
+  border-radius: 50%;
+
+
+  border: 8px solid white;
+
+
+  box-shadow:
+  0 15px 35px rgba(0,0,0,0.15);
+
+
+  animation: aparecerFoto 2s ease;
+
+}
+
+
+
+@keyframes aparecerFoto {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      scale(0.5)
+      rotate(-10deg);
+
+  }
+
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      scale(1)
+      rotate(0deg);
+
+  }
+
+}
+
+
+
+/* Frases */
+
+.frase {
+
+  max-width: 750px;
+
+
+  margin: 35px 20px;
+
+
+  font-size: 28px;
+
+
+  line-height: 1.5;
+
+
+  color: #34495E;
+
+
+  min-height: 90px;
+
+
+  animation: aparecerFrase 1s ease;
+
+}
+
+
+
+@keyframes aparecerFrase {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+  }
+
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+
+
+/* Mensagem final */
+
+.dedicatoria {
+
+  max-width: 700px;
+
+
+  background: white;
+
+
+  padding: 40px;
+
+
+  border-radius: 25px;
+
+
+  margin-top: 30px;
+
+
+  box-shadow:
+
+  0 15px 35px rgba(0,0,0,0.15);
+
+
+  animation: abrirCarta 1.5s ease;
+
+}
+
+
+
+.dedicatoria h2 {
+
+  color: #FF8FAB;
+
+  font-size: 30px;
+
+}
+
+
+
+.dedicatoria p {
+
+  color: #6C7A89;
+
+
+  font-size: 20px;
+
+
+  line-height: 1.8;
+
+}
+
+
+
+/* Brilho do botão */
+
+@keyframes brilho {
+
+  0% {
+
+    box-shadow: 0 0 0 rgba(255,200,221,0);
+
+  }
+
+
+  50% {
+
+    box-shadow: 0 0 25px rgba(255,200,221,0.8);
+
+  }
+
+
+  100% {
+
+    box-shadow: 0 0 0 rgba(255,200,221,0);
+
+  }
+
+}
+
+
+
+/* Celular */
+
+@media(max-width: 600px) {
+
+
+  .surpresa-final {
+
+    padding: 20px;
+
+  }
+
+
+  .surpresa-final h1 {
+
+    font-size: 32px;
+
+  }
+
+
+  .foto-princesa {
+
+    width: 220px;
+
+    height: 220px;
+
+  }
+
+
+  .frase {
+
+    font-size: 21px;
+
+  }
+
+
+  .dedicatoria {
+
+    padding: 25px;
+
+  }
+
+}

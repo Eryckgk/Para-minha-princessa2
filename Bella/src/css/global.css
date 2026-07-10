@@ -1,0 +1,25 @@
+:root {
+  --fundo: #DDEEFF;
+  --azul-pastel: #B8D8F8;
+  --azul-botao: #A7C7E7;
+
+  --rosa: #FFC8DD;
+  --lavanda: #DCC6E0;
+
+  --texto: #34495E;
+  --texto-suave: #6C7A89;
+
+  --branco: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: "Poppins", sans-serif;
+}
+

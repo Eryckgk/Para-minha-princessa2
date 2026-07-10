@@ -1,40 +1,140 @@
-import { useEffect, useState } from "react";
+
+import musica from "../assets2/musica.mp3";
+import foto from "../assets2/foto-dela.jpg";
+
+import "../css/surprezafinal.css";
+import "../css/animacoes.css";
+
+import EmojisCaindo from "./EmojisCaindo";
+import Digitacao from "./Digitacao";
+import { useEffect, useState, useRef } from "react";
+
 
 export default function SurprezaFinal() {
+
   const frases = [
-    "Você é a pessoa mais incrível que existe 💖",
-    "Seu sorriso ilumina tudo ao seu redor ✨",
-    "Eu sou a pessoa mais sortuda por ter você 💞",
-    "Você é meu sonho realizado 💭",
-    "Nada no mundo se compara a você 🌍",
-    "Você é perfeita do seu jeitinho 💕",
-    "Minha vida ficou mais bonita com você 🌸",
-    "Eu te amo mais do que tudo ❤️",
-    "Mas que tchutchuzinho é esse em!!!"
+    "Antes de tudo... eu quero que você saiba uma coisa 🥹🤍",
+    "Você é uma das pessoas mais especiais que já apareceu na minha vida 💖",
+    "Cada momento com você se tornou uma lembrança que eu quero guardar para sempre ✨",
+    "Seu sorriso consegue deixar meus dias muito melhores 😭🤍",
+    "Eu sou muito feliz por ter você na minha vida 🥺💖",
+    "Obrigado por ser essa pessoa incrível, minha princesa 🤍",
+    "Nunca esqueça o quanto você é importante para mim 💕",
+    "Você merece todo amor, carinho e felicidade desse mundo 🌎💖",
+    "Eu espero estar presente em muitos momentos especiais da sua vida 🥹",
+    "Eu te amo muito, minha princesa 🤍✨"
   ];
 
-  const [index, setIndex] = useState(0);
+  const [tocando, setTocando] = useState(false);
+  const [fraseAtual, setFraseAtual] = useState(0);
+
+  const audioRef = useRef(null);
+  
 
   useEffect(() => {
+
     const intervalo = setInterval(() => {
-      setIndex((prev) => (prev + 1) % frases.length);
-    }, 3000);
+
+      setFraseAtual((anterior) => {
+
+        if (anterior < frases.length - 1) {
+          return anterior + 1;
+        }
+
+        return anterior;
+
+      });
+
+    }, 4000);
+
 
     return () => clearInterval(intervalo);
+
   }, []);
 
+
   return (
-    <div>
-      <h1>💖 Pra você, minha Princessa 💖</h1>
 
-      {/* 🎵 MP4 rodando como áudio */}
-      <video autoPlay loop>
-        <source src="/musica.mp4" type="video/mp4" />
-      </video>
+    <div className="surpresa-final fade-in">
 
-      <p key={index}>
-        {frases[index]}
+      <EmojisCaindo />
+
+
+     <audio 
+      ref={audioRef}
+      src={musica}
+       loop
+    />
+
+      {!tocando && (
+
+      <button
+       className="botao-musica"
+       onClick={() => {
+
+      audioRef.current.play();
+
+      setTocando(true);
+
+     }}
+    >
+    🎵 Tocar nossa música 🤍
+    </button>
+
+     )}
+
+
+      <h1>
+        Para você, minha princesa 💖
+      </h1>
+
+
+      <img
+        className="foto-princesa"
+        src={foto}
+        alt="Minha princesa"
+      />
+
+
+      <p className="frase" key={fraseAtual}>
+        <Digitacao texto={frases[fraseAtual]} />
       </p>
+
+
+
+      {fraseAtual === frases.length - 1 && (
+
+        <div className="dedicatoria abrir">
+
+          <h2>
+            Uma mensagem para guardar 🤍
+          </h2>
+
+
+          <p>
+            Minha princesa, nunca esqueça o quanto você é especial.
+            Obrigado por cada sorriso, cada conversa, cada call nossa
+            kskssksk 😂🤍 e cada momento.
+          </p>
+
+
+          <p>
+            Que Deus continue cuidando de você e realizando todos os
+            seus sonhos. 🤍✨
+          </p>
+
+
+          <p>
+            Feliz aniversário, meu amorzinho!!! 🥳💖
+            Eu te amo muito!!! 🤍😭
+          </p>
+
+
+        </div>
+
+      )}
+
     </div>
+
   );
 }

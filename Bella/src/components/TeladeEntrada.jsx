@@ -1,41 +1,34 @@
-import { useState } from "react";
-import Carta from "./Carta";
+import "../css/teladeinicil.css";
+import "../css/animacoes.css";
+import EmojisCaindo from "./EmojisCaindo";
 
-export default function TeladeEntrada() {
-  const [mostrarCarta, setMostrarCarta] = useState(false);
-
-  function handleClick() {
-    setMostrarCarta(true);
-  }
-
-  if (mostrarCarta) {
-    return <Carta />
-  }
-
+export default function TeladeEntrada({ avancar }) {
   return (
-    <div>
-      <h1>🎉 Feliz Aniversário, Princessa 💖</h1>
+    <div className="tela-inicial zoom-in">
 
-      <p>
-        Hoje é o dia da pessoa mais especial da minha vida…
-        A garota que mudou tudo pra melhor.
+      <EmojisCaindo />
+
+      <h1>
+        Oiiiii, minha princesa!!! 🥹💖
+      </h1>
+
+      <p className="mensagem">
+        Eu preparei uma coisinha especial para você...
+        🤍✨
       </p>
 
-      <p>
-        Você é meu amor, minha felicidade, minha paz…
-        Eu te amo mais do que qualquer coisa nesse mundo 💞
+      <p className="mensagem">
+        Antes de continuar, quero que você saiba:
+        você é muito importante para mim. 💕
       </p>
 
-      <p>
-        Que Deus abençoe sua vida hoje e sempre,
-        e que eu possa viver todos os próximos aniversários ao seu lado 💍
-      </p>
-
-      <h2>✨ Bella ✨</h2>
-
-      <button onClick={handleClick}>
-        Clique aqui, meu amor 💌
+      <button 
+        className="botao-surpresa"
+        onClick={avancar}
+      >
+        Abrir minha surpresa 💖
       </button>
+
     </div>
   );
 }
