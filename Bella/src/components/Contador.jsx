@@ -39,7 +39,7 @@ export default function Contador({ aoFinalizar }) {
         <p className="contador-texto">
           Eu preparei algo muito especial para você.
           <br />
-          Cada detalhe foi feito pensando em você, Bella 🤍
+          Cada detalhe foi feito pensando em você, minha princessa 🤍
         </p>
 
 
