@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  font-family: "Poppins", "Segoe UI", sans-serif;
+
+  background: linear-gradient(
+    135deg,
+    #ff758c,
+    #ff7eb3,
+    #c471ed,
+    #f64f59
+  );
+
+  background-size: 400% 400%;
+  animation: fundoAnimado 12s ease infinite;
+
+  color: white;
+}
+
+
+body::before {
+  content: "💖 ✨ 💕 ✨ 💖";
+  position: fixed;
+
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  font-size: 40px;
+  opacity: 0.15;
+
+  animation: flutuar 8s infinite linear;
+
+  pointer-events: none;
+}
+
+
+@keyframes fundoAnimado {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+
+}
+
+
+@keyframes flutuar {
+
+  from {
+    transform: translateY(100vh);
+  }
+
+  to {
+    transform: translateY(-100vh);
+  }
+
+}
+
+
+#root {
+  min-height: 100vh;
+}
